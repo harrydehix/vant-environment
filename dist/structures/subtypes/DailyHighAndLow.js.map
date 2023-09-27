@@ -1,1 +1,0 @@
-{"version":3,"file":"DailyHighAndLow.js","sourceRoot":"","sources":["../../../src/structures/subtypes/DailyHighAndLow.ts"],"names":[],"mappings":";;AAAA;;GAEG;AACH,MAAqB,eAAe;IAChC;;OAEG;IACH;QACA;;WAEG;QACI,QAAG,GAAkB,IAAI,CAAC;QACjC;;WAEG;QACI,SAAI,GAAkB,IAAI,CAAC;QAClC;;WAEG;QACI,YAAO,GAAkB,IAAI,CAAC;QACrC;;WAEG;QACI,aAAQ,GAAkB,IAAI,CAAC;IAhBvB,CAAC;CAiBnB;AArBD,kCAqBC"}
