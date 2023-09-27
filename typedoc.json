@@ -1,4 +1,4 @@
 {
-    "entryPoints": ["src/index.ts", "src/log/index.ts", "src/structures/index.ts", "src/structures/subtypes/index.ts", "src/units/index.ts"],
+    "entryPoints": ["src/index.ts", "src/utils/index.ts", "src/log/index.ts", "src/structures/index.ts", "src/structures/subtypes/index.ts", "src/units/index.ts"],
     "out": "docs"
 }

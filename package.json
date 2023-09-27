@@ -1,13 +1,14 @@
 {
     "name": "vant-environment",
-    "version": "1.1.2",
+    "version": "2.0.0",
     "description": "Common types and structures used across all vant-packages.",
     "exports": {
         ".": "./dist/index.js",
         "./units": "./dist/units/index.js",
         "./structures": "./dist/structures/index.js",
         "./structures/subtypes": "./dist/structures/subtypes/index.js",
-        "./log": "./dist/log/index.js"
+        "./log": "./dist/log/index.js",
+        "./utils": "./dist/utils/index.js"
     },
     "typesVersions": {
         "*": {
@@ -22,6 +23,9 @@
             ],
             "log": [
                 "dist/log"
+            ],
+            "utils": [
+                "dist/utils"
             ]
         }
     },
