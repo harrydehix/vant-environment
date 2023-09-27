@@ -1,12 +1,13 @@
 {
     "name": "vant-environment",
-    "version": "1.0.6",
+    "version": "1.1.0",
     "description": "Common types and structures used across all vant-packages.",
     "exports": {
         ".": "./dist/index.js",
         "./units": "./dist/units/index.js",
         "./structures": "./dist/structures/index.js",
-        "./structures/subtypes": "./dist/structures/subtypes/index.js"
+        "./structures/subtypes": "./dist/structures/subtypes/index.js",
+        "./log": "./dist/log/index.js"
     },
     "typesVersions": {
         "*": {
@@ -18,13 +19,17 @@
             ],
             "units": [
                 "dist/units"
+            ],
+            "log": [
+                "dist/log"
             ]
         }
     },
     "types": "dist/index.d.ts",
     "scripts": {
         "build": "npx tsc",
-        "start": "node dist/index.js"
+        "start": "node dist/index.js",
+        "docs": "npx typedoc"
     },
     "keywords": [
         "vantjs",
@@ -38,6 +43,13 @@
     "author": "Henri Hollmann (harrydehix)",
     "license": "ISC",
     "devDependencies": {
+        "typedoc": "^0.25.1",
         "typescript": "^5.2.2"
+    },
+    "dependencies": {
+        "@types/lodash.merge": "^4.6.7",
+        "lodash.merge": "^4.6.2",
+        "winston": "^3.10.0",
+        "winston-daily-rotate-file": "^4.7.1"
     }
 }

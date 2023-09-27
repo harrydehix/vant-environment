@@ -5,8 +5,6 @@ import RainRateHighs from "./subtypes/RainRateHighs";
 
 /**
  * Holds daily, monthly and yearly highs and lows for all weather elements / sensors.
- *
- * Call {@link VantInterface.getHighsAndLows} to get the current highs and lows from your weather station.
  */
 export default class HighsAndLows {
     /**
