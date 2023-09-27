@@ -1,0 +1,43 @@
+{
+    "name": "vant-environment",
+    "version": "1.0.6",
+    "description": "Common types and structures used across all vant-packages.",
+    "exports": {
+        ".": "./dist/index.js",
+        "./units": "./dist/units/index.js",
+        "./structures": "./dist/structures/index.js",
+        "./structures/subtypes": "./dist/structures/subtypes/index.js"
+    },
+    "typesVersions": {
+        "*": {
+            "structures": [
+                "dist/structures"
+            ],
+            "structures/subtypes": [
+                "dist/structures/subtypes"
+            ],
+            "units": [
+                "dist/units"
+            ]
+        }
+    },
+    "types": "dist/index.d.ts",
+    "scripts": {
+        "build": "npx tsc",
+        "start": "node dist/index.js"
+    },
+    "keywords": [
+        "vantjs",
+        "vant-environment",
+        "davis vantage",
+        "pro 2",
+        "pro",
+        "vue",
+        "weather-station"
+    ],
+    "author": "Henri Hollmann (harrydehix)",
+    "license": "ISC",
+    "devDependencies": {
+        "typescript": "^5.2.2"
+    }
+}
