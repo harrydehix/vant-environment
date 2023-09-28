@@ -44,6 +44,7 @@ export default function configureLogger(logger: winston.Logger, minimumSettings:
     logger.configure({
         level: settings.logLevel,
         transports: transports,
+        silent: transports.length === 0
     });
 
     
