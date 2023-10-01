@@ -17,9 +17,9 @@ export default class DailyHighAndLow {
     /**
      * The time the low of the current day was measured in the `"hh:mm"` format (e.g. `"11:17"`)
      */
-    public lowTime: string | null = null;
+    public lowTime: Date | null = null;
     /**
      * The time the high of the current day was measured in the `"hh:mm"` format (e.g. `"11:17"`)
      */
-    public highTime: string | null = null;
+    public highTime: Date | null = null;
 }

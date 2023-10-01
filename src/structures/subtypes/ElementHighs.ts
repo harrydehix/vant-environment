@@ -13,7 +13,7 @@ export default class ElementHighs {
     /**
      * The time the high of the current day was measured in the `"hh:mm"` format (e.g. `"11:17"`)
      */
-    public dayTime: string | null = null;
+    public dayTime: Date | null = null;
     /**
      * The high of the current month
      */
