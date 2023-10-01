@@ -55,7 +55,7 @@ export default class LOOP2 extends SimpleRealtimeData {
     /**
      * The calculated dew point
      */
-    public dewpoint: number | null = null;
+    public dew: number | null = null;
 
     /**
      * Average wind speed in the recent two minutes
@@ -147,3 +147,6 @@ export default class LOOP2 extends SimpleRealtimeData {
      */
     public packageType = LOOPPackageType.LOOP2 as const;
 }
+
+export type LOOP2ElementID = keyof LOOP2;
+export const LOOP2ElementIDs: (LOOP2ElementID)[] = Object.keys(new LOOP2()) as (LOOP2ElementID)[];

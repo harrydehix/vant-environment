@@ -1,6 +1,6 @@
 {
     "name": "vant-environment",
-    "version": "2.0.2",
+    "version": "3.0.0",
     "description": "Common types and structures used across all vant-packages.",
     "exports": {
         ".": "./dist/index.js",
@@ -47,6 +47,7 @@
     "author": "Henri Hollmann (harrydehix)",
     "license": "ISC",
     "devDependencies": {
+        "ts-essentials": "^9.4.0",
         "typedoc": "^0.25.1",
         "typescript": "^5.2.2"
     },

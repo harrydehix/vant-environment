@@ -14,7 +14,7 @@ export default class HighsAndLows {
     /**
      * Pressure's daily, monthly and yearly highs and lows
      */
-    public pressure = new ElementHighsAndLows();
+    public press = new ElementHighsAndLows();
 
     /**
      * Wind speed's daily, monthly and yearly highs
@@ -79,7 +79,7 @@ export default class HighsAndLows {
     /**
      * Daily, monthly and yearly highs and lows for the extra temperature sensors (up to 7)
      */
-    public extraTemps: [
+    public tempExtra: [
         ElementHighsAndLows,
         ElementHighsAndLows,
         ElementHighsAndLows,
@@ -130,7 +130,7 @@ export default class HighsAndLows {
     /**
      * Daily, monthly and yearly highs and lows for the extra humidity sensors (up to 7)
      */
-    public extraHums: [
+    public humExtra: [
         ElementHighsAndLows,
         ElementHighsAndLows,
         ElementHighsAndLows,
@@ -178,3 +178,6 @@ export default class HighsAndLows {
         new ElementHighsAndLows(),
     ];
 }
+
+export type HighsAndLowsElementID = keyof HighsAndLows;
+export const HighsAndLowsElementIDs = Object.keys(new HighsAndLows()) as HighsAndLowsElementID[];

@@ -14,4 +14,10 @@ export const defaultUnitSettings: UnitSettings = {
     solarRadiation: "W/m²",
     pressure: "inHg",
     rain: "in",
+    elevation: "in",
+    evoTranspiration: "in",
+    humidity: "%",
+    leafTemperature: "°F",
+    soilMoisture: "cb",
+    soilTemperature: "°F"
 };

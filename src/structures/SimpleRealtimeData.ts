@@ -149,3 +149,7 @@ export default class SimpleRealtimeData {
      */
     public time: Date = new Date();
 }
+
+
+export type SimpleRealtimeDataElementID = keyof SimpleRealtimeData;
+export const SimpleRealtimeDataElementIDs: (SimpleRealtimeDataElementID)[] = Object.keys(new SimpleRealtimeData()) as (SimpleRealtimeDataElementID)[];

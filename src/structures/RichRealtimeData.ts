@@ -210,7 +210,7 @@ export default class RichRealtimeData
     /**
      * The calculated dew point
      */
-    public dewpoint: number | null = null;
+    public dew: number | null = null;
     /**
      * Average wind speed in the recent two minutes
      */
@@ -291,3 +291,6 @@ export default class RichRealtimeData
      */
     public rain24h: number | null = null;
 }
+
+export type RichRealtimeDataElementID = keyof RichRealtimeData;
+export const RichRealtimeDataElementIDs: (RichRealtimeDataElementID)[] = Object.keys(new RichRealtimeData()) as (RichRealtimeDataElementID)[];

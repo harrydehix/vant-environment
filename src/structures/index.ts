@@ -1,9 +1,15 @@
 export { default as SimpleRealtimeData } from "./SimpleRealtimeData";
+export { SimpleRealtimeDataElementID as SimpleRealtimeDataElement, SimpleRealtimeDataElementIDs as SimpleRealtimeDataElements }  from "./SimpleRealtimeData";
 export { default as RichRealtimeData } from "./RichRealtimeData";
+export { RichRealtimeDataElementID as RichRealtimeDataElement, RichRealtimeDataElementIDs as RichRealtimeDataElements }  from "./RichRealtimeData";
 export { default as LOOP1 } from "./LOOP1";
+export { LOOP1ElementID as LOOP1Element, LOOP1ElementIDs as LOOP1Elements }  from "./LOOP1";
 export { default as LOOP2 } from "./LOOP2";
+export { LOOP2ElementID as LOOP2Element, LOOP2ElementIDs as LOOP2Elements }  from "./LOOP2";
 export { default as HighsAndLows } from "./HighsAndLows";
+export { HighsAndLowsElementID as HighsAndLowsElement, HighsAndLowsElementIDs as HighsAndLowsElements }  from "./HighsAndLows";
 export { LOOPPackageType } from "./LOOPPackageType";
+export { ElementID, ElementType, ElementsNativeType, ElementsType } from "./Elements";
 
 /** Array holding all valid weather station models. */
 export const Models = ["Pro", "Pro2", "Vue"]

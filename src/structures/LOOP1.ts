@@ -173,3 +173,7 @@ export default class LOOP1 extends SimpleRealtimeData {
      */
     public packageType = LOOPPackageType.LOOP1 as const;
 }
+
+
+export type LOOP1ElementID = keyof LOOP1;
+export const LOOP1ElementIDs: (LOOP1ElementID)[] = Object.keys(new LOOP1()) as (LOOP1ElementID)[];
