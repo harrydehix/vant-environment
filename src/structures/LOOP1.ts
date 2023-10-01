@@ -161,12 +161,12 @@ export default class LOOP1 extends SimpleRealtimeData {
     /**
      * The today's sunrise time (e.g. `06:35`)
      */
-    public sunrise: string | null = null;
+    public sunrise: Date | null = null;
 
     /**
      * The today's sunset time (e.g. `19:35`)
      */
-    public sunset: string | null = null;
+    public sunset: Date | null = null;
 
     /**
      * The package type (always `"LOOP1"`)
