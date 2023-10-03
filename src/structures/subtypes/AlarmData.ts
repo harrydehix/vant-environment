@@ -16,7 +16,7 @@ export default class AlarmData {
     /**
      * Pressure alarms
      */
-    public pressure = new PressureAlarms();
+    public press = new PressureAlarms();
 
     /**
      * Inside temperature alarms
@@ -39,9 +39,9 @@ export default class AlarmData {
     public rain = new RainAlarms();
 
     /**
-     * Whether the daily ET alarm is active
+     * Whether the day ET alarm is active
      */
-    public dailyET: boolean | null = null;
+    public etDay: boolean | null = null;
 
     /**
      * Outside temperature alarms
@@ -55,7 +55,7 @@ export default class AlarmData {
     /**
      * Dewpoint alarms
      */
-    public dewpoint = new HighLowAlarms();
+    public dew = new HighLowAlarms();
 
     /**
      * Whether the high heat index alarm is active
@@ -80,7 +80,7 @@ export default class AlarmData {
     /**
      * UV alarms
      */
-    public UV = new UVAlarms();
+    public uv = new UVAlarms();
 
     /**
      * Outside humidity alarms
@@ -89,10 +89,10 @@ export default class AlarmData {
 
     /**
      * Extra temperature alarms (for up to 7 sensors)
-     * `extraTemps[i].low` is `true` when the low extra temperature alarm for sensor `i` is active,
-     * `extraTemps[i].high` is `true` when the high extra temperature alarm for sensor `i` is active.
+     * `tempExtra[i].low` is `true` when the low extra temperature alarm for sensor `i` is active,
+     * `tempExtra[i].high` is `true` when the high extra temperature alarm for sensor `i` is active.
      */
-    public extraTemps: [
+    public tempExtra: [
         HighLowAlarms,
         HighLowAlarms,
         HighLowAlarms,
@@ -112,10 +112,10 @@ export default class AlarmData {
 
     /**
      * Extra humdity alarms (for up to 7 sensors)
-     * `extraHums[i].low` is `true` when the low extra humidity alarm for sensor `i` is active,
-     * `extraHums[i].high` is `true` when the high extra humidity alarm for sensor `i` is active.
+     * `humExtra[i].low` is `true` when the low extra humidity alarm for sensor `i` is active,
+     * `humExtra[i].high` is `true` when the high extra humidity alarm for sensor `i` is active.
      */
-    public extraHums: [
+    public humExtra: [
         HighLowAlarms,
         HighLowAlarms,
         HighLowAlarms,
