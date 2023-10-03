@@ -79,105 +79,413 @@ export default class HighsAndLows {
     /**
      * Daily, monthly and yearly highs and lows for the extra temperature sensors (up to 7)
      */
-    public tempExtra: [
-        ElementHighsAndLows,
-        ElementHighsAndLows,
-        ElementHighsAndLows,
-        ElementHighsAndLows,
-        ElementHighsAndLows,
-        ElementHighsAndLows,
-        ElementHighsAndLows
-    ] = [
-        new ElementHighsAndLows(),
-        new ElementHighsAndLows(),
-        new ElementHighsAndLows(),
-        new ElementHighsAndLows(),
-        new ElementHighsAndLows(),
-        new ElementHighsAndLows(),
-        new ElementHighsAndLows(),
-    ];
+    public tempExtra = {
+        day: {
+            low: [null, null, null, null, null, null, null] as [
+                null | number,
+                null | number,
+                null | number,
+                null | number,
+                null | number,
+                null | number,
+                null | number
+            ],
+            high: [null, null, null, null, null, null, null] as [
+                null | number,
+                null | number,
+                null | number,
+                null | number,
+                null | number,
+                null | number,
+                null | number
+            ],
+            lowTime: [null, null, null, null, null, null, null] as [
+                null | Date,
+                null | Date,
+                null | Date,
+                null | Date,
+                null | Date,
+                null | Date,
+                null | Date
+            ],
+            highTime: [null, null, null, null, null, null, null] as [
+                null | Date,
+                null | Date,
+                null | Date,
+                null | Date,
+                null | Date,
+                null | Date,
+                null | Date
+            ],
+        },
+        month: {
+            low: [null, null, null, null, null, null, null] as [
+                null | number,
+                null | number,
+                null | number,
+                null | number,
+                null | number,
+                null | number,
+                null | number
+            ],
+            high: [null, null, null, null, null, null, null] as [
+                null | number,
+                null | number,
+                null | number,
+                null | number,
+                null | number,
+                null | number,
+                null | number
+            ],
+        },
+        year: {
+            low: [null, null, null, null, null, null, null] as [
+                null | number,
+                null | number,
+                null | number,
+                null | number,
+                null | number,
+                null | number,
+                null | number
+            ],
+            high: [null, null, null, null, null, null, null] as [
+                null | number,
+                null | number,
+                null | number,
+                null | number,
+                null | number,
+                null | number,
+                null | number
+            ],
+        },
+    };
 
     /**
      * Daily, monthly and yearly highs and lows for the soil temperature sensors (up to 4)
      */
-    public soilTemps: [
-        ElementHighsAndLows,
-        ElementHighsAndLows,
-        ElementHighsAndLows,
-        ElementHighsAndLows
-    ] = [
-        new ElementHighsAndLows(),
-        new ElementHighsAndLows(),
-        new ElementHighsAndLows(),
-        new ElementHighsAndLows(),
-    ];
+    public soilTemps = {
+        day: {
+            low: [null, null, null, null] as [
+                null | number,
+                null | number,
+                null | number,
+                null | number
+            ],
+            high: [null, null, null, null] as [
+                null | number,
+                null | number,
+                null | number,
+                null | number
+            ],
+            lowTime: [null, null, null, null] as [
+                null | Date,
+                null | Date,
+                null | Date,
+                null | Date
+            ],
+            highTime: [null, null, null, null] as [
+                null | Date,
+                null | Date,
+                null | Date,
+                null | Date
+            ],
+        },
+        month: {
+            low: [null, null, null, null] as [
+                null | number,
+                null | number,
+                null | number,
+                null | number
+            ],
+            high: [null, null, null, null] as [
+                null | number,
+                null | number,
+                null | number,
+                null | number
+            ],
+        },
+        year: {
+            low: [null, null, null, null] as [
+                null | number,
+                null | number,
+                null | number,
+                null | number
+            ],
+            high: [null, null, null, null] as [
+                null | number,
+                null | number,
+                null | number,
+                null | number
+            ],
+        },
+    };
 
     /**
      * Daily, monthly and yearly highs and lows for the leaf temperature sensors (up to 4)
      */
-    public leafTemps: [
-        ElementHighsAndLows,
-        ElementHighsAndLows,
-        ElementHighsAndLows,
-        ElementHighsAndLows
-    ] = [
-        new ElementHighsAndLows(),
-        new ElementHighsAndLows(),
-        new ElementHighsAndLows(),
-        new ElementHighsAndLows(),
-    ];
+    public leafTemps = {
+        day: {
+            low: [null, null, null, null] as [
+                null | number,
+                null | number,
+                null | number,
+                null | number
+            ],
+            high: [null, null, null, null] as [
+                null | number,
+                null | number,
+                null | number,
+                null | number
+            ],
+            lowTime: [null, null, null, null] as [
+                null | Date,
+                null | Date,
+                null | Date,
+                null | Date
+            ],
+            highTime: [null, null, null, null] as [
+                null | Date,
+                null | Date,
+                null | Date,
+                null | Date
+            ],
+        },
+        month: {
+            low: [null, null, null, null] as [
+                null | number,
+                null | number,
+                null | number,
+                null | number
+            ],
+            high: [null, null, null, null] as [
+                null | number,
+                null | number,
+                null | number,
+                null | number
+            ],
+        },
+        year: {
+            low: [null, null, null, null] as [
+                null | number,
+                null | number,
+                null | number,
+                null | number
+            ],
+            high: [null, null, null, null] as [
+                null | number,
+                null | number,
+                null | number,
+                null | number
+            ],
+        },
+    };
 
     /**
      * Daily, monthly and yearly highs and lows for the extra humidity sensors (up to 7)
      */
-    public humExtra: [
-        ElementHighsAndLows,
-        ElementHighsAndLows,
-        ElementHighsAndLows,
-        ElementHighsAndLows,
-        ElementHighsAndLows,
-        ElementHighsAndLows,
-        ElementHighsAndLows
-    ] = [
-        new ElementHighsAndLows(),
-        new ElementHighsAndLows(),
-        new ElementHighsAndLows(),
-        new ElementHighsAndLows(),
-        new ElementHighsAndLows(),
-        new ElementHighsAndLows(),
-        new ElementHighsAndLows(),
-    ];
+    public humExtra = {
+        day: {
+            low: [null, null, null, null, null, null, null] as [
+                null | number,
+                null | number,
+                null | number,
+                null | number,
+                null | number,
+                null | number,
+                null | number
+            ],
+            high: [null, null, null, null, null, null, null] as [
+                null | number,
+                null | number,
+                null | number,
+                null | number,
+                null | number,
+                null | number,
+                null | number
+            ],
+            lowTime: [null, null, null, null, null, null, null] as [
+                null | Date,
+                null | Date,
+                null | Date,
+                null | Date,
+                null | Date,
+                null | Date,
+                null | Date
+            ],
+            highTime: [null, null, null, null, null, null, null] as [
+                null | Date,
+                null | Date,
+                null | Date,
+                null | Date,
+                null | Date,
+                null | Date,
+                null | Date
+            ],
+        },
+        month: {
+            low: [null, null, null, null, null, null, null] as [
+                null | number,
+                null | number,
+                null | number,
+                null | number,
+                null | number,
+                null | number,
+                null | number
+            ],
+            high: [null, null, null, null, null, null, null] as [
+                null | number,
+                null | number,
+                null | number,
+                null | number,
+                null | number,
+                null | number,
+                null | number
+            ],
+        },
+        year: {
+            low: [null, null, null, null, null, null, null] as [
+                null | number,
+                null | number,
+                null | number,
+                null | number,
+                null | number,
+                null | number,
+                null | number
+            ],
+            high: [null, null, null, null, null, null, null] as [
+                null | number,
+                null | number,
+                null | number,
+                null | number,
+                null | number,
+                null | number,
+                null | number
+            ],
+        },
+    };
 
     /**
      * Daily, monthly and yearly highs and lows for the soil moisture sensors (up to 4)
      */
-    public soilMoistures: [
-        ElementHighsAndLows,
-        ElementHighsAndLows,
-        ElementHighsAndLows,
-        ElementHighsAndLows
-    ] = [
-        new ElementHighsAndLows(),
-        new ElementHighsAndLows(),
-        new ElementHighsAndLows(),
-        new ElementHighsAndLows(),
-    ];
+    public soilMoistures = {
+        day: {
+            low: [null, null, null, null] as [
+                null | number,
+                null | number,
+                null | number,
+                null | number
+            ],
+            high: [null, null, null, null] as [
+                null | number,
+                null | number,
+                null | number,
+                null | number
+            ],
+            lowTime: [null, null, null, null] as [
+                null | Date,
+                null | Date,
+                null | Date,
+                null | Date
+            ],
+            highTime: [null, null, null, null] as [
+                null | Date,
+                null | Date,
+                null | Date,
+                null | Date
+            ],
+        },
+        month: {
+            low: [null, null, null, null] as [
+                null | number,
+                null | number,
+                null | number,
+                null | number
+            ],
+            high: [null, null, null, null] as [
+                null | number,
+                null | number,
+                null | number,
+                null | number
+            ],
+        },
+        year: {
+            low: [null, null, null, null] as [
+                null | number,
+                null | number,
+                null | number,
+                null | number
+            ],
+            high: [null, null, null, null] as [
+                null | number,
+                null | number,
+                null | number,
+                null | number
+            ],
+        },
+    };
 
     /**
      * Daily, monthly and yearly highs and lows for the leaf wetness sensors (up to 4)
      */
-    public leafWetnesses: [
-        ElementHighsAndLows,
-        ElementHighsAndLows,
-        ElementHighsAndLows,
-        ElementHighsAndLows
-    ] = [
-        new ElementHighsAndLows(),
-        new ElementHighsAndLows(),
-        new ElementHighsAndLows(),
-        new ElementHighsAndLows(),
-    ];
+    public leafWetnesses = {
+        day: {
+            low: [null, null, null, null] as [
+                null | number,
+                null | number,
+                null | number,
+                null | number
+            ],
+            high: [null, null, null, null] as [
+                null | number,
+                null | number,
+                null | number,
+                null | number
+            ],
+            lowTime: [null, null, null, null] as [
+                null | Date,
+                null | Date,
+                null | Date,
+                null | Date
+            ],
+            highTime: [null, null, null, null] as [
+                null | Date,
+                null | Date,
+                null | Date,
+                null | Date
+            ],
+        },
+        month: {
+            low: [null, null, null, null] as [
+                null | number,
+                null | number,
+                null | number,
+                null | number
+            ],
+            high: [null, null, null, null] as [
+                null | number,
+                null | number,
+                null | number,
+                null | number
+            ],
+        },
+        year: {
+            low: [null, null, null, null] as [
+                null | number,
+                null | number,
+                null | number,
+                null | number
+            ],
+            high: [null, null, null, null] as [
+                null | number,
+                null | number,
+                null | number,
+                null | number
+            ],
+        },
+    };
 }
 
 export type HighsAndLowsElementID = keyof HighsAndLows;
-export const HighsAndLowsElementIDs = Object.keys(new HighsAndLows()) as HighsAndLowsElementID[];
+export const HighsAndLowsElementIDs = Object.keys(
+    new HighsAndLows()
+) as HighsAndLowsElementID[];
