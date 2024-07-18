@@ -1,12 +1,12 @@
-import { LOOPPackageType } from "./LOOPPackageType";
-import SimpleRealtimeData from "./SimpleRealtimeData";
-import AlarmData from "./subtypes/AlarmData";
+import { LOOPPackageType } from "./LOOPPackageType.js";
+import BasicRealtimeData from "./BasicRealtimeData.js";
+import AlarmData from "./subtypes/AlarmData.js";
 
 /**
  * The older LOOP(1) package used by Rev "A" firmware (dated before April 24, 2002).
  * Newer weather stations support this package type too.
  */
-export default class LOOP1 extends SimpleRealtimeData {
+export default class LOOP1 extends BasicRealtimeData {
     /**
      * Measured extra temperatures (from up to 7 sensors)
      */

@@ -1,6 +1,6 @@
-import DailyHighAndLow from "./DailyHighAndLow";
-import MonthlyHighAndLow from "./MonthlyHighAndLow";
-import YearlyHighAndLow from "./YearlyHighAndLow";
+import DailyHighAndLow from "./DailyHighAndLow.js";
+import MonthlyHighAndLow from "./MonthlyHighAndLow.js";
+import YearlyHighAndLow from "./YearlyHighAndLow.js";
 
 /**
  * Holds the daily, monthly and yearly highs and lows of a specific weather element / sensor.

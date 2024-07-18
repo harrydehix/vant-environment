@@ -1,7 +1,7 @@
-import ElementHighs from "./subtypes/ElementHighs";
-import ElementHighsAndLows from "./subtypes/ElementHighsAndLows";
-import ElementLows from "./subtypes/ElementLows";
-import RainRateHighs from "./subtypes/RainRateHighs";
+import ElementHighs from "./subtypes/ElementHighs.js";
+import ElementHighsAndLows from "./subtypes/ElementHighsAndLows.js";
+import ElementLows from "./subtypes/ElementLows.js";
+import RainRateHighs from "./subtypes/RainRateHighs.js";
 
 /**
  * Holds daily, monthly and yearly highs and lows for all weather elements / sensors.

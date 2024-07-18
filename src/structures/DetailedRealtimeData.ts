@@ -1,12 +1,12 @@
-import LOOP1 from "./LOOP1";
-import LOOP2 from "./LOOP2";
-import SimpleRealtimeData from "./SimpleRealtimeData";
+import LOOP1 from "./LOOP1.js";
+import LOOP2 from "./LOOP2.js";
+import BasicRealtimeData from "./BasicRealtimeData.js";
 
 /**
  * Contains a lot of useful realtime weather data. Only works on Vantage Vue and Vantage Pro 2 (having firmware dated after April 24, 2002 / v1.90 or above).
  */
-export default class RichRealtimeData
-    extends SimpleRealtimeData
+export default class DetailedRealtimeData
+    extends BasicRealtimeData
     implements
         Omit<LOOP1, "nextArchiveRecord" | "packageType" | "alarms">,
         Omit<LOOP2, "packageType" | "graphPointers">
@@ -292,5 +292,5 @@ export default class RichRealtimeData
     public rain24h: number | null = null;
 }
 
-export type RichRealtimeDataElementID = keyof RichRealtimeData;
-export const RichRealtimeDataElementIDs: (RichRealtimeDataElementID)[] = Object.keys(new RichRealtimeData()) as (RichRealtimeDataElementID)[];
+export type DetailedRealtimeDataElementID = keyof DetailedRealtimeData;
+export const DetailedRealtimeDataElementIDs: (DetailedRealtimeDataElementID)[] = Object.keys(new DetailedRealtimeData()) as (DetailedRealtimeDataElementID)[];

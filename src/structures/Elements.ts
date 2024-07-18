@@ -1,7 +1,7 @@
-import { UnitConfiguration } from "../units";
-import { HighsAndLowsElementID } from "./HighsAndLows";
-import RichRealtimeData, { RichRealtimeDataElementID, RichRealtimeDataElementIDs } from "./RichRealtimeData";
-import { SimpleRealtimeDataElementID } from "./SimpleRealtimeData";
+import { UnitConfiguration } from "../units/index.js";
+import { HighsAndLowsElementID } from "./HighsAndLows.js";
+import DetailedRealtimeData, { DetailedRealtimeDataElementID, DetailedRealtimeDataElementIDs } from "./DetailedRealtimeData.js";
+import { BasicRealtimeDataElementID } from "./BasicRealtimeData.js";
 
 /**
  * Every element has an element type. E.g. `tempIn` has the element type `temperature`.
@@ -11,12 +11,12 @@ export type ElementType = keyof UnitConfiguration | "date" | "other";
 /**
  * A valid element id, e.g. `tempIn` or `humExtra`.
  */
-export type ElementID = RichRealtimeDataElementID | SimpleRealtimeDataElementID | HighsAndLowsElementID;
+export type ElementID = DetailedRealtimeDataElementID | BasicRealtimeDataElementID | HighsAndLowsElementID;
 /** An array holding all valid element ids. */
-export const ElementIDs: ElementID[] = [...RichRealtimeDataElementIDs];
+export const ElementIDs: ElementID[] = [...DetailedRealtimeDataElementIDs];
 
 /** Returns the native element type of the passed element. E.g. `number | null` is returned for `tempIn`. */
-export type ElementsNativeType<ID extends ElementID> = RichRealtimeData[ID];
+export type ElementsNativeType<ID extends ElementID> = DetailedRealtimeData[ID];
 
 /** Holds every element's type. E.g. `ElementsType["tempIn"]` returns `"temperature"`. */
 export const ElementsType : { [ID in ElementID] : ElementType } = {

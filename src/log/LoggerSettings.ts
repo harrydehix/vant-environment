@@ -1,4 +1,4 @@
-import LogLevel from "./LogLevel";
+import LogLevel from "./LogLevel.js";
 
 export default interface LoggerSettings{
     /** The minimimum log level that will be output. Default is `"info"`. Corresponding environment variable: `LOG_LEVEL` */

@@ -1,5 +1,5 @@
 import winston from "winston";
-import { defaultLoggerSettings, MinimumLoggerSettings } from "./LoggerSettings";
+import { defaultLoggerSettings, MinimumLoggerSettings } from "./LoggerSettings.js";
 import 'winston-daily-rotate-file';
 import { inspect } from "util";
 import merge from "lodash.merge";

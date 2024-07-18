@@ -1,4 +1,4 @@
-import { UnitSettings } from "./units";
+import { UnitSettings } from "./units.js";
 
 /**
  * The default unit settings.

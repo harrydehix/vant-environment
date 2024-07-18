@@ -1,12 +1,12 @@
-import { LOOPPackageType } from "./LOOPPackageType";
-import SimpleRealtimeData from "./SimpleRealtimeData";
-import GraphPointers from "./subtypes/GraphPointers";
+import { LOOPPackageType } from "./LOOPPackageType.js";
+import BasicRealtimeData from "./BasicRealtimeData.js";
+import GraphPointers from "./subtypes/GraphPointers.js";
 
 /**
  * The newer LOOP2 package used by Rev "B" firmware (dated after April 24, 2002 / v1.90 or above).
  * Older weather stations don't support this package type. The Vantage Pro doesn't support this package at all.
  */
-export default class LOOP2 extends SimpleRealtimeData {
+export default class LOOP2 extends BasicRealtimeData {
     /** Barometric sensor raw reading */
     public pressRaw: number | null = null;
 

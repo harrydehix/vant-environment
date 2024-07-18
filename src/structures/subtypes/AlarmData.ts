@@ -1,8 +1,8 @@
-import HighLowAlarms from "./HighLowAlarms";
-import PressureAlarms from "./PressureAlarms";
-import RainAlarms from "./RainAlarms";
-import UVAlarms from "./UVAlarms";
-import WindAlarms from "./WindAlarms";
+import HighLowAlarms from "./HighLowAlarms.js";
+import PressureAlarms from "./PressureAlarms.js";
+import RainAlarms from "./RainAlarms.js";
+import UVAlarms from "./UVAlarms.js";
+import WindAlarms from "./WindAlarms.js";
 
 /**
  * Activity of all alarms

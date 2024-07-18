@@ -7,43 +7,43 @@ export default class GraphPointers {
      * graph point, just subtract 1 (range from 0 to 23 on VP/VP2
      * console and 0 to 24 on Vantage Vue console)
      */
-    next10mWindSpeed = 0;
+    next10mWindSpeed: number | null = null;
     /**
      * Points to the next 15-minute wind speed graph point. For current
      * graph point, just subtract 1 (range from 0 to 23 on VP/VP2
      * console and 0 to 24 on Vantage Vue console)
      */
-    next15mWindSpeed = 0;
+    next15mWindSpeed: number | null = null;
     /**
      * Points to the next hour wind speed graph point. For current
      * graph point, just subtract 1 (range from 0 to 23 on VP/VP2
      * console and 0 to 24 on Vantage Vue console)
      */
-    nextHourWindSpeed = 0;
+    nextHourWindSpeed: number | null = null;
     /**
      * Points to the next daily wind speed graph point. For current
      * graph point, just subtract 1 (range from 0 to 23 on VP/VP2
      * console and 0 to 24 on Vantage Vue console)
      */
-    nextDailyWindSpeed = 0;
+    nextDailyWindSpeed: number | null = null;
     /**
      * Points to the next minute rain graph point. For current
      * graph point, just subtract 1 (range from 0 to 23 on VP/VP2
      * console and 0 to 24 on Vantage Vue console)
      */
-    nextMinuteRain = 0;
+    nextMinuteRain: number | null = null;
     /**
      * Points to the next monthly rain graph point. For current
      * graph point, just subtract 1 (range from 0 to 23 on VP/VP2
      * console and 0 to 24 on Vantage Vue console)
      */
-    nextMonthlyRain = 0;
+    nextMonthlyRain: number | null = null;
     /**
      * Points to the next yearly rain graph point. For current
      * graph point, just subtract 1 (range from 0 to 23 on VP/VP2
      * console and 0 to 24 on Vantage Vue console)
      */
-    nextYearlyRain = 0;
+    nextYearlyRain: number | null = null;
     /**
      * Points to the next seasonal rain graph point. Yearly rain always
      * resets at the beginning of the calendar, but seasonal rain resets
@@ -51,18 +51,18 @@ export default class GraphPointers {
      * (range from 0 to 23 on VP/VP2 console and 0 to 24 on Vantage
      * Vue console)
      */
-    nextSeasonalRain = 0;
+    nextSeasonalRain: number | null = null;
 
     /**
      * Points to the next rain storm graph point. For current
      * graph point, just subtract 1 (range from 0 to 23 on VP/VP2
      * console and 0 to 24 on Vantage Vue console)
      */
-    nextRainStorm = 0;
+    nextRainStorm: number | null = null;
 
     /*
      * Keeps track of the minute within an hour for the rain
      * calculation. (range from 0 to 59)
      * */
-    currentMinuteIndex = 0;
+    currentMinuteIndex: number | null = null;
 }

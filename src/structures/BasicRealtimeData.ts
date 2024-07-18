@@ -1,7 +1,7 @@
 /**
  * Contains basic realtime weather data. Works regardless of the weather station model (Vue, Pro, Pro 2) and its firmware version.
  */
-export default class SimpleRealtimeData {
+export default class BasicRealtimeData {
     /**
      * @hidden
      */
@@ -151,5 +151,5 @@ export default class SimpleRealtimeData {
 }
 
 
-export type SimpleRealtimeDataElementID = keyof SimpleRealtimeData;
-export const SimpleRealtimeDataElementIDs: (SimpleRealtimeDataElementID)[] = Object.keys(new SimpleRealtimeData()) as (SimpleRealtimeDataElementID)[];
+export type BasicRealtimeDataElementID = keyof BasicRealtimeData;
+export const BasicRealtimeDataElementIDs: (BasicRealtimeDataElementID)[] = Object.keys(new BasicRealtimeData()) as (BasicRealtimeDataElementID)[];
